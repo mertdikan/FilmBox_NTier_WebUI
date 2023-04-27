@@ -1,0 +1,24 @@
+C:\Users\Yahya\source\repos\FilmBox_Proje\DAL\bin\Debug\DAL.dll
+C:\Users\Yahya\source\repos\FilmBox_Proje\DAL\bin\Debug\DAL.pdb
+C:\Users\Yahya\source\repos\FilmBox_Proje\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\Yahya\source\repos\FilmBox_Proje\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Yahya\source\repos\FilmBox_Proje\DAL\obj\Debug\DAL.dll
+C:\Users\Yahya\source\repos\FilmBox_Proje\DAL\obj\Debug\DAL.pdb
+C:\Users\Yahya\source\repos\FilmBox_Proje\DAL\bin\Debug\DAL.dll.config
+C:\Users\Yahya\source\repos\FilmBox_Proje\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Yahya\source\repos\FilmBox_Proje\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Yahya\source\repos\FilmBox_Proje\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Yahya\source\repos\FilmBox_Proje\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Yahya\source\repos\FilmBox_Proje\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\DAL\bin\Debug\DAL.dll.config
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\DAL\bin\Debug\DAL.dll
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\DAL\bin\Debug\DAL.pdb
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\DAL\bin\Debug\EntityFramework.dll
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\DAL\bin\Debug\EntityFramework.xml
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\DAL\obj\Debug\DAL.dll
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\DAL\obj\Debug\DAL.pdb

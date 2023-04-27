@@ -1,0 +1,257 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WEBUI.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+    <meta content="HTML Learn" name="description" />
+    <meta content="HTML,HTML5" name="keywords" />
+    <meta content="witdh=device-width" name="viewport" />
+    <style type="text/css">
+        .main {
+            background-image: url("image/yeto.jpg");
+            background-size: cover;
+            height: auto;
+            width: auto;
+            /*margin:auto;*/
+            /*    position: relative;
+            display: flex;*/
+        }
+        /*header {*/
+        /* background-color: darkorange;*/
+        /*background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,41,121,1) 35%, rgba(0,212,255,1) 100%);
+            height: 100px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-style: oblique;
+            font-weight: bold;
+            color: mistyrose;
+            font-size: xx-large;
+        }*/
+
+
+        .heady {
+            height: 100px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-style: oblique;
+            font-weight: bold;
+            color: burlywood;
+            font-size: 80px;
+        }
+
+        .product {
+            width: 180px;
+            height: 275px;
+            border: 1px solid;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            background-color: lightgray
+        }
+
+        .imagec:hover {
+            transform: scale(1.10);
+        }
+
+
+        .productDetail {
+            width: 180px;
+            height: 25px;
+            text-align: center;
+            font-weight: bold;
+            background-color: lightgray
+        }
+
+        .productPicture {
+            padding: 5px;
+        }
+
+        .productEditing {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .product:hover {
+            background-color: lightgray;
+        }
+
+        .productPicture:hover {
+            transform: scale(0.75);
+            transition: transform 0.5s ease;
+        }
+
+        nav {
+            background-color: transparent;
+            
+            height: 100px;
+            border-radius: 5px;
+            margin: 10px 0px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+            nav a {
+             
+                border-radius: 2px;
+                margin: 0px 10px;
+                text-decoration: none;
+                font-size: xx-large;
+                font-family: cursive;
+                color: lemonchiffon;
+            }
+
+                nav a:hover {
+                     color: burlywood;
+                     transform:scale(1.10);
+                }
+
+        aside div {
+            box-shadow: 3px 3px orange;
+        }
+
+            aside div:hover {
+                box-shadow: 5px 5px 5px orange;
+                opacity: 0.6;
+                transition: 300ms ease;
+            }
+
+        #midDiv {
+            width: 100%;
+            display: flex;
+            border: 2px solid purple;
+            /* border-radius: 5px;*/
+            margin: 10px 0px;
+            height: auto;
+        }
+
+        article {
+            width: 70%;
+            background-color: white;
+            margin: 5px;
+            padding: 15px;
+            text-align: center;
+            margin-left: 350px;
+            display: flex;
+        }
+
+        section p {
+            text-align: justify;
+            text-indent: 20px;
+        }
+
+        .plaBu::first-letter {
+            font-size: 40px;
+            padding-right: 5px;
+            color: white;
+        }
+
+        aside {
+            width: 30%;
+            
+            margin: 5px;
+            text-align: center;
+            padding: 5px;
+        }
+
+            aside div {
+                width: auto;
+                
+                margin: 5px;
+                padding: 5px;
+                text-align: center;
+                
+            }
+
+        footer {
+            margin-top: 0px;
+            margin: 10px 0px;
+            height: 75px;
+            font-size:x-large;
+            border-radius: 5px;
+            /*background-color: dimgray;*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,41,121,1) 35%, rgba(0,212,255,1) 100%);
+            /* background-image:linear-gradient(yellow,blue);*/
+        }
+
+            footer:hover {
+                transition-duration: 2s;
+                transition-property: background-color;
+                background-color: blue;
+            }
+
+        @media (orientation : landscape) {
+            #midDiv {
+                flex-direction: row;
+            }
+        }
+
+        @media (orientation : portrait) {
+            nav {
+                display: flex;
+                flex-direction: column;
+            }
+
+                nav a {
+                    width: inherit;
+                    text-align: center;
+                }
+
+            #midDiv {
+                flex-direction: column;
+            }
+
+            article {
+                width: auto;
+                display: flex;
+                flex-direction: column;
+            }
+
+            aside {
+                width: auto;
+                height: 100%;
+            }
+
+            #asideDiv {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            
+        }
+    </style>
+</head>
+<asp:ContentPlaceHolder ID="head" runat="server">
+</asp:ContentPlaceHolder>
+
+<body>
+    <form id="form1" runat="server">
+
+        <div class="main">
+            <header class="heady">- Ctrl Shift B -</header>
+            <nav>
+                <a href="AnaSayfa.aspx">Ana Sayfa</a>
+                <a href="Webform3.aspx">Filmler</a>
+                <a href="WebDiziler.aspx">Diziler</a>
+                <a href="WebFormOyuncular.aspx">Oyuncular</a>
+            </nav>
+            <hr />
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+
+            <footer>&copy;Tum Hakları saklıdır. By -Ctrl Shift B- Network</footer>
+        </div>
+
+    </form>
+</body>
+</html>

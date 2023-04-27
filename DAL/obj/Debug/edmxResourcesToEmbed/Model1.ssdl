@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FilmBox_DbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Actor">
+    <Key>
+      <PropertyRef Name="ActorId" />
+    </Key>
+    <Property Name="ActorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Age" Type="int" />
+    <Property Name="Awards" Type="int" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="images" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Genre" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NumberOfFilm" Type="int" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerId" />
+    </Key>
+    <Property Name="CustomerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdentityNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Age" Type="int" />
+    <Property Name="PhoneNumer" Type="nvarchar" MaxLength="20" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Director">
+    <Key>
+      <PropertyRef Name="DirectorId" />
+    </Key>
+    <Property Name="DirectorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DirectorName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DirectorLastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Age" Type="int" />
+    <Property Name="Awards" Type="int" />
+  </EntityType>
+  <EntityType Name="Film">
+    <Key>
+      <PropertyRef Name="FilmId" />
+    </Key>
+    <Property Name="FilmId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FilmName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Views" Type="int" Nullable="false" />
+    <Property Name="Vote" Type="int" />
+    <Property Name="FilmDuration" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="DateOfConstruction" Type="date" />
+    <Property Name="Language" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FilmEndorsement" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="images" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="FilmActorDetail">
+    <Key>
+      <PropertyRef Name="FilmActorDetailID" />
+    </Key>
+    <Property Name="FilmActorDetailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FilmId" Type="int" Nullable="false" />
+    <Property Name="ActorId" Type="int" Nullable="false" />
+    <Property Name="Role" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ActorRate" Type="int" />
+  </EntityType>
+  <EntityType Name="FilmCategoryDetail">
+    <Key>
+      <PropertyRef Name="FilmCategoryDetailID" />
+    </Key>
+    <Property Name="FilmCategoryDetailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FilmId" Type="int" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FilmCustomerDetail">
+    <Key>
+      <PropertyRef Name="FilmCustomerDetailID" />
+    </Key>
+    <Property Name="FilmCustomerDetailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FilmId" Type="int" Nullable="false" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FilmDirectorDetail">
+    <Key>
+      <PropertyRef Name="FilmDirectorDetailID" />
+    </Key>
+    <Property Name="FilmDirectorDetailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FilmId" Type="int" Nullable="false" />
+    <Property Name="DirectorId" Type="int" Nullable="false" />
+    <Property Name="DirectorRate" Type="int" />
+  </EntityType>
+  <EntityType Name="Series">
+    <Key>
+      <PropertyRef Name="SeriesId" />
+    </Key>
+    <Property Name="SeriesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SeriesName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Views" Type="int" Nullable="false" />
+    <Property Name="Vote" Type="int" />
+    <Property Name="SeriesDuration" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="DateOfConstruction" Type="date" />
+    <Property Name="Language" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SeriesEndorsement" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="images" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="SeriesActorDetail">
+    <Key>
+      <PropertyRef Name="SeriesActorDetailID" />
+    </Key>
+    <Property Name="SeriesActorDetailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SeriesId" Type="int" Nullable="false" />
+    <Property Name="ActorId" Type="int" Nullable="false" />
+    <Property Name="Role" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ActorRate" Type="int" />
+  </EntityType>
+  <EntityType Name="SeriesCategoryDetail">
+    <Key>
+      <PropertyRef Name="SeriesCategoryDetailID" />
+    </Key>
+    <Property Name="SeriesCategoryDetailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SeriesId" Type="int" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SeriesCustomerDetail">
+    <Key>
+      <PropertyRef Name="SeriesCustomerDetailID" />
+    </Key>
+    <Property Name="SeriesCustomerDetailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SeriesId" Type="int" Nullable="false" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SeriesDirectorDetail">
+    <Key>
+      <PropertyRef Name="SeriesDirectorDetailID" />
+    </Key>
+    <Property Name="SeriesDirectorDetailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SeriesId" Type="int" Nullable="false" />
+    <Property Name="DirectorId" Type="int" Nullable="false" />
+    <Property Name="DirectorRate" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="KullaniciAdi" />
+    </Key>
+    <Property Name="KullaniciAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="sifre" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__FilmActor__Actor__31EC6D26">
+    <End Role="Actor" Type="Self.Actor" Multiplicity="1" />
+    <End Role="FilmActorDetail" Type="Self.FilmActorDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Actor">
+        <PropertyRef Name="ActorId" />
+      </Principal>
+      <Dependent Role="FilmActorDetail">
+        <PropertyRef Name="ActorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FilmActor__FilmI__30F848ED">
+    <End Role="Film" Type="Self.Film" Multiplicity="1" />
+    <End Role="FilmActorDetail" Type="Self.FilmActorDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Film">
+        <PropertyRef Name="FilmId" />
+      </Principal>
+      <Dependent Role="FilmActorDetail">
+        <PropertyRef Name="FilmId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FilmCateg__Categ__35BCFE0A">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="FilmCategoryDetail" Type="Self.FilmCategoryDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="CategoryId" />
+      </Principal>
+      <Dependent Role="FilmCategoryDetail">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FilmCateg__FilmI__34C8D9D1">
+    <End Role="Film" Type="Self.Film" Multiplicity="1" />
+    <End Role="FilmCategoryDetail" Type="Self.FilmCategoryDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Film">
+        <PropertyRef Name="FilmId" />
+      </Principal>
+      <Dependent Role="FilmCategoryDetail">
+        <PropertyRef Name="FilmId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FilmCusto__Custo__3D5E1FD2">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+    <End Role="FilmCustomerDetail" Type="Self.FilmCustomerDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="CustomerId" />
+      </Principal>
+      <Dependent Role="FilmCustomerDetail">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FilmCusto__FilmI__3C69FB99">
+    <End Role="Film" Type="Self.Film" Multiplicity="1" />
+    <End Role="FilmCustomerDetail" Type="Self.FilmCustomerDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Film">
+        <PropertyRef Name="FilmId" />
+      </Principal>
+      <Dependent Role="FilmCustomerDetail">
+        <PropertyRef Name="FilmId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FilmDirec__Direc__398D8EEE">
+    <End Role="Director" Type="Self.Director" Multiplicity="1" />
+    <End Role="FilmDirectorDetail" Type="Self.FilmDirectorDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Director">
+        <PropertyRef Name="DirectorId" />
+      </Principal>
+      <Dependent Role="FilmDirectorDetail">
+        <PropertyRef Name="DirectorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FilmDirec__FilmI__38996AB5">
+    <End Role="Film" Type="Self.Film" Multiplicity="1" />
+    <End Role="FilmDirectorDetail" Type="Self.FilmDirectorDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Film">
+        <PropertyRef Name="FilmId" />
+      </Principal>
+      <Dependent Role="FilmDirectorDetail">
+        <PropertyRef Name="FilmId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SeriesAct__Actor__412EB0B6">
+    <End Role="Actor" Type="Self.Actor" Multiplicity="1" />
+    <End Role="SeriesActorDetail" Type="Self.SeriesActorDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Actor">
+        <PropertyRef Name="ActorId" />
+      </Principal>
+      <Dependent Role="SeriesActorDetail">
+        <PropertyRef Name="ActorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SeriesAct__Serie__403A8C7D">
+    <End Role="Series" Type="Self.Series" Multiplicity="1" />
+    <End Role="SeriesActorDetail" Type="Self.SeriesActorDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Series">
+        <PropertyRef Name="SeriesId" />
+      </Principal>
+      <Dependent Role="SeriesActorDetail">
+        <PropertyRef Name="SeriesId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SeriesCat__Categ__44FF419A">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="SeriesCategoryDetail" Type="Self.SeriesCategoryDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="CategoryId" />
+      </Principal>
+      <Dependent Role="SeriesCategoryDetail">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SeriesCat__Serie__440B1D61">
+    <End Role="Series" Type="Self.Series" Multiplicity="1" />
+    <End Role="SeriesCategoryDetail" Type="Self.SeriesCategoryDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Series">
+        <PropertyRef Name="SeriesId" />
+      </Principal>
+      <Dependent Role="SeriesCategoryDetail">
+        <PropertyRef Name="SeriesId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SeriesCus__Custo__4CA06362">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+    <End Role="SeriesCustomerDetail" Type="Self.SeriesCustomerDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="CustomerId" />
+      </Principal>
+      <Dependent Role="SeriesCustomerDetail">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SeriesCus__Serie__4BAC3F29">
+    <End Role="Series" Type="Self.Series" Multiplicity="1" />
+    <End Role="SeriesCustomerDetail" Type="Self.SeriesCustomerDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Series">
+        <PropertyRef Name="SeriesId" />
+      </Principal>
+      <Dependent Role="SeriesCustomerDetail">
+        <PropertyRef Name="SeriesId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SeriesDir__Direc__48CFD27E">
+    <End Role="Director" Type="Self.Director" Multiplicity="1" />
+    <End Role="SeriesDirectorDetail" Type="Self.SeriesDirectorDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Director">
+        <PropertyRef Name="DirectorId" />
+      </Principal>
+      <Dependent Role="SeriesDirectorDetail">
+        <PropertyRef Name="DirectorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SeriesDir__Serie__47DBAE45">
+    <End Role="Series" Type="Self.Series" Multiplicity="1" />
+    <End Role="SeriesDirectorDetail" Type="Self.SeriesDirectorDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Series">
+        <PropertyRef Name="SeriesId" />
+      </Principal>
+      <Dependent Role="SeriesDirectorDetail">
+        <PropertyRef Name="SeriesId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FilmBox_DbModelStoreContainer">
+    <EntitySet Name="Actor" EntityType="Self.Actor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Director" EntityType="Self.Director" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Film" EntityType="Self.Film" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FilmActorDetail" EntityType="Self.FilmActorDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FilmCategoryDetail" EntityType="Self.FilmCategoryDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FilmCustomerDetail" EntityType="Self.FilmCustomerDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FilmDirectorDetail" EntityType="Self.FilmDirectorDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Series" EntityType="Self.Series" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SeriesActorDetail" EntityType="Self.SeriesActorDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SeriesCategoryDetail" EntityType="Self.SeriesCategoryDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SeriesCustomerDetail" EntityType="Self.SeriesCustomerDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SeriesDirectorDetail" EntityType="Self.SeriesDirectorDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__FilmActor__Actor__31EC6D26" Association="Self.FK__FilmActor__Actor__31EC6D26">
+      <End Role="Actor" EntitySet="Actor" />
+      <End Role="FilmActorDetail" EntitySet="FilmActorDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FilmActor__FilmI__30F848ED" Association="Self.FK__FilmActor__FilmI__30F848ED">
+      <End Role="Film" EntitySet="Film" />
+      <End Role="FilmActorDetail" EntitySet="FilmActorDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FilmCateg__Categ__35BCFE0A" Association="Self.FK__FilmCateg__Categ__35BCFE0A">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="FilmCategoryDetail" EntitySet="FilmCategoryDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FilmCateg__FilmI__34C8D9D1" Association="Self.FK__FilmCateg__FilmI__34C8D9D1">
+      <End Role="Film" EntitySet="Film" />
+      <End Role="FilmCategoryDetail" EntitySet="FilmCategoryDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FilmCusto__Custo__3D5E1FD2" Association="Self.FK__FilmCusto__Custo__3D5E1FD2">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="FilmCustomerDetail" EntitySet="FilmCustomerDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FilmCusto__FilmI__3C69FB99" Association="Self.FK__FilmCusto__FilmI__3C69FB99">
+      <End Role="Film" EntitySet="Film" />
+      <End Role="FilmCustomerDetail" EntitySet="FilmCustomerDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FilmDirec__Direc__398D8EEE" Association="Self.FK__FilmDirec__Direc__398D8EEE">
+      <End Role="Director" EntitySet="Director" />
+      <End Role="FilmDirectorDetail" EntitySet="FilmDirectorDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FilmDirec__FilmI__38996AB5" Association="Self.FK__FilmDirec__FilmI__38996AB5">
+      <End Role="Film" EntitySet="Film" />
+      <End Role="FilmDirectorDetail" EntitySet="FilmDirectorDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SeriesAct__Actor__412EB0B6" Association="Self.FK__SeriesAct__Actor__412EB0B6">
+      <End Role="Actor" EntitySet="Actor" />
+      <End Role="SeriesActorDetail" EntitySet="SeriesActorDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SeriesAct__Serie__403A8C7D" Association="Self.FK__SeriesAct__Serie__403A8C7D">
+      <End Role="Series" EntitySet="Series" />
+      <End Role="SeriesActorDetail" EntitySet="SeriesActorDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SeriesCat__Categ__44FF419A" Association="Self.FK__SeriesCat__Categ__44FF419A">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="SeriesCategoryDetail" EntitySet="SeriesCategoryDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SeriesCat__Serie__440B1D61" Association="Self.FK__SeriesCat__Serie__440B1D61">
+      <End Role="Series" EntitySet="Series" />
+      <End Role="SeriesCategoryDetail" EntitySet="SeriesCategoryDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SeriesCus__Custo__4CA06362" Association="Self.FK__SeriesCus__Custo__4CA06362">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="SeriesCustomerDetail" EntitySet="SeriesCustomerDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SeriesCus__Serie__4BAC3F29" Association="Self.FK__SeriesCus__Serie__4BAC3F29">
+      <End Role="Series" EntitySet="Series" />
+      <End Role="SeriesCustomerDetail" EntitySet="SeriesCustomerDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SeriesDir__Direc__48CFD27E" Association="Self.FK__SeriesDir__Direc__48CFD27E">
+      <End Role="Director" EntitySet="Director" />
+      <End Role="SeriesDirectorDetail" EntitySet="SeriesDirectorDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SeriesDir__Serie__47DBAE45" Association="Self.FK__SeriesDir__Serie__47DBAE45">
+      <End Role="Series" EntitySet="Series" />
+      <End Role="SeriesDirectorDetail" EntitySet="SeriesDirectorDetail" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

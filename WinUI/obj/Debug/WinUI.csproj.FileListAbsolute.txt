@@ -1,0 +1,50 @@
+C:\Users\Yahya\source\repos\FilmBox_Proje\WinUI\bin\Debug\WinUI.exe.config
+C:\Users\Yahya\source\repos\FilmBox_Proje\WinUI\bin\Debug\WinUI.exe
+C:\Users\Yahya\source\repos\FilmBox_Proje\WinUI\bin\Debug\WinUI.pdb
+C:\Users\Yahya\source\repos\FilmBox_Proje\WinUI\obj\Debug\WinUI.csproj.AssemblyReference.cache
+C:\Users\Yahya\source\repos\FilmBox_Proje\WinUI\obj\Debug\WinUI.Properties.Resources.resources
+C:\Users\Yahya\source\repos\FilmBox_Proje\WinUI\obj\Debug\WinUI.csproj.GenerateResource.cache
+C:\Users\Yahya\source\repos\FilmBox_Proje\WinUI\obj\Debug\WinUI.csproj.CoreCompileInputs.cache
+C:\Users\Yahya\source\repos\FilmBox_Proje\WinUI\obj\Debug\WinUI.exe
+C:\Users\Yahya\source\repos\FilmBox_Proje\WinUI\obj\Debug\WinUI.pdb
+C:\Users\Yahya\source\repos\FilmBox_Proje\WinUI\bin\Debug\BLL.dll
+C:\Users\Yahya\source\repos\FilmBox_Proje\WinUI\bin\Debug\DTO.dll
+C:\Users\Yahya\source\repos\FilmBox_Proje\WinUI\bin\Debug\BLL.pdb
+C:\Users\Yahya\source\repos\FilmBox_Proje\WinUI\bin\Debug\DTO.pdb
+C:\Users\Yahya\source\repos\FilmBox_Proje\WinUI\obj\Debug\WinUI.csproj.CopyComplete
+C:\Users\Yahya\source\repos\FilmBox_Proje\WinUI\bin\Debug\DTO.dll.config
+C:\Users\Yahya\source\repos\FilmBox_Proje\WinUI\bin\Debug\EntityFramework.dll
+C:\Users\Yahya\source\repos\FilmBox_Proje\WinUI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Yahya\source\repos\FilmBox_Proje\WinUI\bin\Debug\EntityFramework.xml
+C:\Users\Yahya\source\repos\FilmBox_Proje\WinUI\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Yahya\source\repos\FilmBox_Proje\WinUI\bin\Debug\DAL.dll
+C:\Users\Yahya\source\repos\FilmBox_Proje\WinUI\bin\Debug\BLL.dll.config
+C:\Users\Yahya\source\repos\FilmBox_Proje\WinUI\bin\Debug\DAL.pdb
+C:\Users\Yahya\source\repos\FilmBox_Proje\WinUI\bin\Debug\DAL.dll.config
+C:\Users\Yahya\source\repos\FilmBox_Proje\WinUI\obj\Debug\WinUI.Form1.resources
+C:\Users\Yahya\source\repos\FilmBox_Proje\WinUI\obj\Debug\WinUI.Admin.resources
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\WinUI\bin\Debug\WinUI.exe.config
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\WinUI\bin\Debug\WinUI.exe
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\WinUI\bin\Debug\WinUI.pdb
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\WinUI\bin\Debug\BLL.dll
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\WinUI\bin\Debug\DTO.dll
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\WinUI\bin\Debug\EntityFramework.dll
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\WinUI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\WinUI\bin\Debug\DAL.dll
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\WinUI\bin\Debug\BLL.pdb
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\WinUI\bin\Debug\BLL.dll.config
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\WinUI\bin\Debug\DTO.pdb
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\WinUI\bin\Debug\DTO.dll.config
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\WinUI\bin\Debug\EntityFramework.xml
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\WinUI\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\WinUI\bin\Debug\DAL.pdb
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\WinUI\bin\Debug\DAL.dll.config
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\WinUI\obj\Debug\WinUI.csproj.AssemblyReference.cache
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\WinUI\obj\Debug\WinUI.Admin.resources
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\WinUI\obj\Debug\WinUI.Form1.resources
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\WinUI\obj\Debug\WinUI.Properties.Resources.resources
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\WinUI\obj\Debug\WinUI.csproj.GenerateResource.cache
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\WinUI\obj\Debug\WinUI.csproj.CoreCompileInputs.cache
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\WinUI\obj\Debug\WinUI.csproj.CopyComplete
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\WinUI\obj\Debug\WinUI.exe
+C:\Users\mert-\Desktop\sql tekrar\FilmBox_Proje\WinUI\obj\Debug\WinUI.pdb

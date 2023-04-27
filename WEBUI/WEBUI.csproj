@@ -1,0 +1,434 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{92CA0E6C-95AD-40AA-ADE0-2159186AFA54}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WEBUI</RootNamespace>
+    <AssemblyName>WEBUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44315</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminTemplate\404.html" />
+    <Content Include="AdminTemplate\ajax\activities.html" />
+    <Content Include="AdminTemplate\ajax\edit_photo.html" />
+    <Content Include="AdminTemplate\ajax\messages.html" />
+    <Content Include="AdminTemplate\ajax\tabledata.html" />
+    <Content Include="AdminTemplate\buttons.html" />
+    <Content Include="AdminTemplate\calendar.html" />
+    <Content Include="AdminTemplate\charts.html" />
+    <Content Include="AdminTemplate\chat.html" />
+    <Content Include="AdminTemplate\css\plugins\colorbox.css" />
+    <Content Include="AdminTemplate\css\plugins\colorpicker.css" />
+    <Content Include="AdminTemplate\css\plugins\fullcalendar.css" />
+    <Content Include="AdminTemplate\css\plugins\jquery.alerts.css" />
+    <Content Include="AdminTemplate\css\plugins\jquery.jgrowl.css" />
+    <Content Include="AdminTemplate\css\plugins\jquery.ui.css" />
+    <Content Include="AdminTemplate\css\plugins\jquery.wysiwyg.css" />
+    <Content Include="AdminTemplate\css\style.css" />
+    <Content Include="AdminTemplate\dashboard.html" />
+    <Content Include="AdminTemplate\editor.html" />
+    <Content Include="AdminTemplate\elements.html" />
+    <Content Include="AdminTemplate\font\BebasNeue-webfont.svg" />
+    <Content Include="AdminTemplate\font\README.txt" />
+    <Content Include="AdminTemplate\form.html" />
+    <Content Include="AdminTemplate\grid.html" />
+    <Content Include="AdminTemplate\images\arrow.png" />
+    <Content Include="AdminTemplate\images\arrow2.png" />
+    <Content Include="AdminTemplate\images\assets\thumb\large\thumb1.png" />
+    <Content Include="AdminTemplate\images\assets\thumb\large\thumb2.png" />
+    <Content Include="AdminTemplate\images\assets\thumb\large\thumb3.png" />
+    <Content Include="AdminTemplate\images\assets\thumb\large\thumb4.png" />
+    <Content Include="AdminTemplate\images\assets\thumb\large\thumb5.png" />
+    <Content Include="AdminTemplate\images\assets\thumb\large\thumb6.png" />
+    <Content Include="AdminTemplate\images\assets\thumb\large\thumb7.png" />
+    <Content Include="AdminTemplate\images\assets\thumb\large\thumb8.png" />
+    <Content Include="AdminTemplate\images\assets\thumb\large\thumb9.png" />
+    <Content Include="AdminTemplate\images\assets\thumb\medium\thumb1.png" />
+    <Content Include="AdminTemplate\images\assets\thumb\medium\thumb2.png" />
+    <Content Include="AdminTemplate\images\assets\thumb\medium\thumb3.png" />
+    <Content Include="AdminTemplate\images\assets\thumb\medium\thumb4.png" />
+    <Content Include="AdminTemplate\images\assets\thumb\medium\thumb5.png" />
+    <Content Include="AdminTemplate\images\assets\thumb\medium\thumb6.png" />
+    <Content Include="AdminTemplate\images\assets\thumb\medium\thumb7.png" />
+    <Content Include="AdminTemplate\images\assets\thumb\medium\thumb8.png" />
+    <Content Include="AdminTemplate\images\assets\thumb\medium\thumb9.png" />
+    <Content Include="AdminTemplate\images\assets\thumb\small\thumb1.png" />
+    <Content Include="AdminTemplate\images\assets\thumb\small\thumb2.png" />
+    <Content Include="AdminTemplate\images\assets\thumb\small\thumb3.png" />
+    <Content Include="AdminTemplate\images\assets\thumb\small\thumb4.png" />
+    <Content Include="AdminTemplate\images\assets\thumb\small\thumb5.png" />
+    <Content Include="AdminTemplate\images\av1.png" />
+    <Content Include="AdminTemplate\images\av2.png" />
+    <Content Include="AdminTemplate\images\av3.png" />
+    <Content Include="AdminTemplate\images\av4.png" />
+    <Content Include="AdminTemplate\images\avatar.png" />
+    <Content Include="AdminTemplate\images\avatar2.png" />
+    <Content Include="AdminTemplate\images\bgmain.png" />
+    <Content Include="AdminTemplate\images\blacktrans.png" />
+    <Content Include="AdminTemplate\images\blacktrans1.html" />
+    <Content Include="AdminTemplate\images\buttonbg.png" />
+    <Content Include="AdminTemplate\images\buttonbg3.html" />
+    <Content Include="AdminTemplate\images\buttons.png" />
+    <Content Include="AdminTemplate\images\calarrow.png" />
+    <Content Include="AdminTemplate\images\checkbox.png" />
+    <Content Include="AdminTemplate\images\close.png" />
+    <Content Include="AdminTemplate\images\colorbox\controls.png" />
+    <Content Include="AdminTemplate\images\colorbox\loading.gif" />
+    <Content Include="AdminTemplate\images\colorpicker\colorpicker_background.png" />
+    <Content Include="AdminTemplate\images\colorpicker\colorpicker_hex.png" />
+    <Content Include="AdminTemplate\images\colorpicker\colorpicker_hsb_b.png" />
+    <Content Include="AdminTemplate\images\colorpicker\colorpicker_hsb_h.png" />
+    <Content Include="AdminTemplate\images\colorpicker\colorpicker_hsb_s.png" />
+    <Content Include="AdminTemplate\images\colorpicker\colorpicker_indic.gif" />
+    <Content Include="AdminTemplate\images\colorpicker\colorpicker_overlay.png" />
+    <Content Include="AdminTemplate\images\colorpicker\colorpicker_rgb_b.png" />
+    <Content Include="AdminTemplate\images\colorpicker\colorpicker_rgb_g.png" />
+    <Content Include="AdminTemplate\images\colorpicker\colorpicker_rgb_r.png" />
+    <Content Include="AdminTemplate\images\colorpicker\colorpicker_select.gif" />
+    <Content Include="AdminTemplate\images\colorpicker\colorpicker_submit.png" />
+    <Content Include="AdminTemplate\images\headbg.png" />
+    <Content Include="AdminTemplate\images\icons\arrow.png" />
+    <Content Include="AdminTemplate\images\icons\default\alert.png" />
+    <Content Include="AdminTemplate\images\icons\default\calendar.png" />
+    <Content Include="AdminTemplate\images\icons\default\call.png" />
+    <Content Include="AdminTemplate\images\icons\default\chat.png" />
+    <Content Include="AdminTemplate\images\icons\default\editor.png" />
+    <Content Include="AdminTemplate\images\icons\default\events.png" />
+    <Content Include="AdminTemplate\images\icons\default\glass.png" />
+    <Content Include="AdminTemplate\images\icons\default\image.png" />
+    <Content Include="AdminTemplate\images\icons\default\mail.png" />
+    <Content Include="AdminTemplate\images\icons\default\media.png" />
+    <Content Include="AdminTemplate\images\icons\default\message.png" />
+    <Content Include="AdminTemplate\images\icons\default\settings.png" />
+    <Content Include="AdminTemplate\images\icons\default\sprites.png" />
+    <Content Include="AdminTemplate\images\icons\default\trash.png" />
+    <Content Include="AdminTemplate\images\icons\default\users.png" />
+    <Content Include="AdminTemplate\images\jquery.wysiwyg.gif" />
+    <Content Include="AdminTemplate\images\loaders\loader1.gif" />
+    <Content Include="AdminTemplate\images\loaders\loader10.gif" />
+    <Content Include="AdminTemplate\images\loaders\loader2.gif" />
+    <Content Include="AdminTemplate\images\loaders\loader3.gif" />
+    <Content Include="AdminTemplate\images\loaders\loader4.gif" />
+    <Content Include="AdminTemplate\images\loaders\loader5.gif" />
+    <Content Include="AdminTemplate\images\loaders\loader6.gif" />
+    <Content Include="AdminTemplate\images\loaders\loader7.gif" />
+    <Content Include="AdminTemplate\images\loaders\loader8.gif" />
+    <Content Include="AdminTemplate\images\loaders\loader9.gif" />
+    <Content Include="AdminTemplate\images\loginputbg.png" />
+    <Content Include="AdminTemplate\images\menudroparrow.png" />
+    <Content Include="AdminTemplate\images\notifications.png" />
+    <Content Include="AdminTemplate\images\online.png" />
+    <Content Include="AdminTemplate\images\progress.png" />
+    <Content Include="AdminTemplate\images\radio.png" />
+    <Content Include="AdminTemplate\images\search.png" />
+    <Content Include="AdminTemplate\images\sort_asc.png" />
+    <Content Include="AdminTemplate\images\sort_both.png" />
+    <Content Include="AdminTemplate\images\sort_desc.png" />
+    <Content Include="AdminTemplate\images\starlight_admin_template_logo.png" />
+    <Content Include="AdminTemplate\images\starlight_admin_template_logo_small.png" />
+    <Content Include="AdminTemplate\images\stepline.png" />
+    <Content Include="AdminTemplate\images\steps.png" />
+    <Content Include="AdminTemplate\images\thead.html" />
+    <Content Include="AdminTemplate\images\thumb\small\thumb1.png" />
+    <Content Include="AdminTemplate\images\thumb\small\thumb2.png" />
+    <Content Include="AdminTemplate\images\thumb\small\thumb3.png" />
+    <Content Include="AdminTemplate\images\thumb\small\thumb4.png" />
+    <Content Include="AdminTemplate\images\thumb\small\thumb5.png" />
+    <Content Include="AdminTemplate\images\thumb\xsmall\thumb1.png" />
+    <Content Include="AdminTemplate\images\thumb\xsmall\thumb2.png" />
+    <Content Include="AdminTemplate\images\thumb\xsmall\thumb3.png" />
+    <Content Include="AdminTemplate\images\thumb\xsmall\thumb4.png" />
+    <Content Include="AdminTemplate\images\thumb\xsmall\thumb5.png" />
+    <Content Include="AdminTemplate\images\thumb\xsmall\thumb6.png" />
+    <Content Include="AdminTemplate\images\thumb\xsmall\thumb7.png" />
+    <Content Include="AdminTemplate\images\thumb\xsmall\thumb8.png" />
+    <Content Include="AdminTemplate\images\titlebg.png" />
+    <Content Include="AdminTemplate\images\toggle.png" />
+    <Content Include="AdminTemplate\index.html" />
+    <Content Include="AdminTemplate\js\custom\calendar.js" />
+    <Content Include="AdminTemplate\js\custom\charts.js" />
+    <Content Include="AdminTemplate\js\custom\chat.js" />
+    <Content Include="AdminTemplate\js\custom\dashboard.js" />
+    <Content Include="AdminTemplate\js\custom\elements.js" />
+    <Content Include="AdminTemplate\js\custom\form.js" />
+    <Content Include="AdminTemplate\js\custom\general.js" />
+    <Content Include="AdminTemplate\js\custom\media.js" />
+    <Content Include="AdminTemplate\js\custom\tables.js" />
+    <Content Include="AdminTemplate\js\custom\widgets.js" />
+    <Content Include="AdminTemplate\js\plugins\colorpicker.js" />
+    <Content Include="AdminTemplate\js\plugins\fullcalendar.min.js" />
+    <Content Include="AdminTemplate\js\plugins\jquery-1.7.min.js" />
+    <Content Include="AdminTemplate\js\plugins\jquery-ui-1.8.16.custom.min.js" />
+    <Content Include="AdminTemplate\js\plugins\jquery.alerts.js" />
+    <Content Include="AdminTemplate\js\plugins\jquery.colorbox-min.js" />
+    <Content Include="AdminTemplate\js\plugins\jquery.dataTables.min.js" />
+    <Content Include="AdminTemplate\js\plugins\jquery.effects.core.min.js" />
+    <Content Include="AdminTemplate\js\plugins\jquery.effects.explode.min.js" />
+    <Content Include="AdminTemplate\js\plugins\jquery.flot.min.js" />
+    <Content Include="AdminTemplate\js\plugins\jquery.flot.pie.js" />
+    <Content Include="AdminTemplate\js\plugins\jquery.flot.resize.min.js" />
+    <Content Include="AdminTemplate\js\plugins\jquery.jgrowl.js" />
+    <Content Include="AdminTemplate\js\plugins\jquery.smartWizard-2.0.min.js" />
+    <Content Include="AdminTemplate\js\plugins\jquery.validate.min.js" />
+    <Content Include="AdminTemplate\js\plugins\wysiwyg\jquery.wysiwyg.js" />
+    <Content Include="AdminTemplate\js\plugins\wysiwyg\wysiwyg.image.js" />
+    <Content Include="AdminTemplate\js\plugins\wysiwyg\wysiwyg.link.js" />
+    <Content Include="AdminTemplate\js\plugins\wysiwyg\wysiwyg.table.js" />
+    <Content Include="AdminTemplate\media.html" />
+    <Content Include="AdminTemplate\tables.html" />
+    <Content Include="AdminTemplate\widgets.html" />
+    <Content Include="AdminTemplate\wizard.html" />
+    <Content Include="AnaSayfa.aspx" />
+    <Content Include="GirisWeb.aspx" />
+    <Content Include="image\aclikoyunlari.jpg" />
+    <Content Include="image\albaflores.jpg" />
+    <Content Include="image\alexandramasangkay.jpg" />
+    <Content Include="image\behzatc.jpg" />
+    <Content Include="image\brakingbad.jpg" />
+    <Content Include="image\brayncranston.jpg" />
+    <Content Include="image\dark.jpg" />
+    <Content Include="image\dogu.jpg" />
+    <Content Include="image\elijahwood.jpg" />
+    <Content Include="image\esaretinbedeli.jpg" />
+    <Content Include="image\ezel.jpg" />
+    <Content Include="image\fightclub.jpg" />
+    <Content Include="image\harrypotter.jpg" />
+    <Content Include="image\himym.jpg" />
+    <Content Include="image\jenniferlawrence.jpg" />
+    <Content Include="image\kenanimirzalioglu.jpg" />
+    <Content Include="image\kolpacino.jpg" />
+    <Content Include="image\kurtlarvadisi.jpg" />
+    <Content Include="image\kuzeyguney.jpg" />
+    <Content Include="image\lacasadepapel.jpg" />
+    <Content Include="image\lupin.jpg" />
+    <Content Include="image\murders.JPG" />
+    <Content Include="image\oktaykaynarca.jpg" />
+    <Content Include="image\platform.jpg" />
+    <Content Include="image\prestij.jpg" />
+    <Content Include="image\prisonbreak.jpg" />
+    <Content Include="image\robbiecoltrane.jpg" />
+    <Content Include="image\safaksezer.jpg" />
+    <Content Include="image\thegladiator.jpg" />
+    <Content Include="image\thegodfather.jpg" />
+    <Content Include="image\thematrix.jpg" />
+    <Content Include="image\thepianist.jpg" />
+    <Content Include="image\violadavis.jpg" />
+    <Content Include="image\yeto.jpg" />
+    <Content Include="image\yuzuklerinefendisi.jpg" />
+    <Content Include="Web.config" />
+    <Content Include="WebDiziler.aspx" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="WebForm3.aspx" />
+    <Content Include="WebFormOyuncular.aspx" />
+    <Content Include="Webkullanici.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnaSayfa.aspx.cs">
+      <DependentUpon>AnaSayfa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnaSayfa.aspx.designer.cs">
+      <DependentUpon>AnaSayfa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GirisWeb.aspx.cs">
+      <DependentUpon>GirisWeb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GirisWeb.aspx.designer.cs">
+      <DependentUpon>GirisWeb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WebDiziler.aspx.cs">
+      <DependentUpon>WebDiziler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebDiziler.aspx.designer.cs">
+      <DependentUpon>WebDiziler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm3.aspx.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm3.aspx.designer.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormOyuncular.aspx.cs">
+      <DependentUpon>WebFormOyuncular.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormOyuncular.aspx.designer.cs">
+      <DependentUpon>WebFormOyuncular.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webkullanici.aspx.cs">
+      <DependentUpon>Webkullanici.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webkullanici.aspx.designer.cs">
+      <DependentUpon>Webkullanici.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminTemplate\ajax\desktop.ini" />
+    <Content Include="AdminTemplate\css\desktop.ini" />
+    <Content Include="AdminTemplate\css\plugins\desktop.ini" />
+    <Content Include="AdminTemplate\desktop.ini" />
+    <Content Include="AdminTemplate\font\BebasNeue-webfont.eot" />
+    <Content Include="AdminTemplate\font\BebasNeue-webfont.ttf" />
+    <Content Include="AdminTemplate\font\BebasNeue-webfont.woff" />
+    <Content Include="AdminTemplate\font\BebasNeue-webfontd41d.eot" />
+    <Content Include="AdminTemplate\font\desktop.ini" />
+    <Content Include="AdminTemplate\images\assets\desktop.ini" />
+    <Content Include="AdminTemplate\images\assets\thumb\desktop.ini" />
+    <Content Include="AdminTemplate\images\assets\thumb\large\desktop.ini" />
+    <Content Include="AdminTemplate\images\assets\thumb\medium\desktop.ini" />
+    <Content Include="AdminTemplate\images\assets\thumb\small\desktop.ini" />
+    <Content Include="AdminTemplate\images\colorbox\desktop.ini" />
+    <Content Include="AdminTemplate\images\colorpicker\desktop.ini" />
+    <Content Include="AdminTemplate\images\desktop.ini" />
+    <Content Include="AdminTemplate\images\icons\default\desktop.ini" />
+    <Content Include="AdminTemplate\images\icons\desktop.ini" />
+    <Content Include="AdminTemplate\images\loaders\desktop.ini" />
+    <Content Include="AdminTemplate\images\thumb\desktop.ini" />
+    <Content Include="AdminTemplate\images\thumb\small\desktop.ini" />
+    <Content Include="AdminTemplate\images\thumb\xsmall\desktop.ini" />
+    <Content Include="AdminTemplate\js\custom\desktop.ini" />
+    <Content Include="AdminTemplate\js\desktop.ini" />
+    <Content Include="AdminTemplate\js\plugins\desktop.ini" />
+    <Content Include="AdminTemplate\js\plugins\wysiwyg\desktop.ini" />
+    <None Include="packages.config" />
+    <Content Include="Site1.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{47e1ea54-fe27-4f29-9596-13053d4af08f}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{ae6df2dd-e045-4660-96b4-b6d845ecd3ea}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57696</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44315/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
